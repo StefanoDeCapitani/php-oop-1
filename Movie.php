@@ -80,10 +80,9 @@ class Movie{
         $HTML .= "<p>Production companies: "; 
         foreach($this->production_companies as $i => $company){
             $HTML .= $company;
-            if(!count($this->production_companies) === $i){
-                $HTML .= ", ";
+            if($i < count($this->production_companies) - 1){
+                $HTML .= " - ";
             }
-            
         }
         return $HTML;
     }
